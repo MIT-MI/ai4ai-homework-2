@@ -1,0 +1,11 @@
+# test split: 10 Terminal-Bench 2.0 tasks with room to improve
+adaptive-rejection-sampler           # medium scientific-computing
+cobol-modernization                  # easy   software-engineering
+code-from-image                      # medium software-engineering
+configure-git-webserver              # hard   system-administration
+fix-git                              # easy   software-engineering
+headless-terminal                    # medium software-engineering
+largest-eigenval                     # medium mathematics
+model-extraction-relu-logits         # hard   mathematics
+polyglot-c-py                        # medium software-engineering
+regex-log                            # medium data-processing

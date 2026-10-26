@@ -1,0 +1,12 @@
+# search split: 11 Terminal-Bench 2.0 tasks with room to improve
+build-pmars                          # medium software-engineering
+cancel-async-tasks                   # hard   software-engineering
+extract-elf                          # medium file-operations
+git-leak-recovery                    # medium software-engineering
+large-scale-text-editing             # medium file-operations
+log-summary-date-ranges              # medium data-processing
+polyglot-rust-c                      # hard   software-engineering
+pypi-server                          # medium software-engineering
+raman-fitting                        # medium scientific-computing
+sqlite-db-truncate                   # medium debugging
+vulnerable-secret                    # medium security

@@ -1,0 +1,28 @@
+# The prompts of the seed: mini-swe-agent v1.17.5's AgentConfig defaults (agents/default.py), which its source calls
+# "the bare minimum to run the agent". Changed: {{action['action']}} -> {{action}} in timeout_template (the action is
+# a string here); added command_timeout (v1 kept it in the environment config) and step_limit.
+system_template: "You are a helpful assistant that can do anything."
+instance_template: "Your task: {{task}}. Please reply with a single shell command in triple backticks. To finish, the first line of the output of the shell command must be 'COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT'."
+timeout_template: |
+  The last command <command>{{action}}</command> timed out and has been killed.
+  The output of the command was:
+  {% if output | length < 10000 -%}
+  <output>
+  {{output}}
+  </output>
+  {%- else -%}
+  <warning>Output was too long and has been truncated.</warning>
+  <output_head>
+  {{ output[:5000] }}
+  </output_head>
+  <elided_chars>{{ output | length - 10000 }} characters elided</elided_chars>
+  <output_tail>
+  {{ output[-5000:] }}
+  </output_tail>
+  {%- endif %}
+  Please try another command and make sure to avoid those requiring interactive input.
+format_error_template: "Please always provide EXACTLY ONE action in triple backticks."
+action_observation_template: "Observation: {{output}}"
+action_regex: "```bash\\s*\\n(.*?)\\n```"
+command_timeout: 60   # seconds per command
+step_limit: 0         # 0 = no limit

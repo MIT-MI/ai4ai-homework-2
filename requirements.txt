@@ -1,0 +1,4 @@
+harbor==0.24.0     # runs Terminal-Bench tasks in containers; needs Python >= 3.12 and Docker
+openai>=1.40       # the model client (Kimi's API is OpenAI-compatible)
+pyyaml
+jinja2
