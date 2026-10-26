@@ -98,7 +98,8 @@ Run the loop for at least 8 rounds.
 python evolve.py --run runs/main --rounds 8
 ```
 
-A proposal takes 4 to 10 minutes and $0.50 to $1.30, and an evaluation can take over an hour.
+A proposal takes 4 to 10 minutes and $0.50 to $1.30. An evaluation takes up to about 75 minutes, so 8 rounds take
+several hours.
 
 ## 4. Test
 
